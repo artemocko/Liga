@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Južno Slovenská amatérna liga do 14 rokov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #eee;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      section {
+        margin: 10px;
+        padding: 10px;
+      }
+      table, th, td {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Južno Slovenská amatérna liga do 14 rokov</h1>
+  <nav>
+    <a href="#rozpis">Rozpis zápasov</a>
+    <a href="#tabulka">Tabuľka</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<section id="uvod">
+  <h2>O lige</h2>
+  <p>
+    Liga vznikla, <strong>aby deti ešte od rána mali chuť do súťaže</strong> a mohli si užívať futbal v kolektíve.
+    Sme tu, aby sme podporili mladé talenty a priniesli radosť z hry všetkým účastníkom.
+  </p>
+  <p>
+    Podrobné výsledky zápasov nájdete v aplikácii <a href="https://www.sofascore.com" target="_blank" rel="noopener">Sofascore</a>.
+  </p>
+</section>
+
+<section id="rozpis">
+  <h2>Rozpis zápasov (18.6.2025 - 31.8.2025)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Dátum</th>
+        <th>Čas</th>
+        <th>Domáci</th>
+        <th>Hosť</th>
+      </tr>
+    </thead>
+    <tbody id="matches-table-body">
+      <!-- zápasy sa sem vložia cez JS -->
+    </tbody>
+  </table>
+</section>
+
+<section id="tabulka">
+  <h2>Ligová tabuľka</h2>
+  <table>
+    <thead>
+      <tr><th>Tím</th><th>Body</th><th>Výhry</th><th>Prehry</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dunajská Streda Sever</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Gabčíkovo</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Spojené Dvorníky</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Malé Dvorníky FC</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Orechová Potôň</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Vrakúň Východ</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>FC Jahodná</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Tomášikovo</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Dolný Bar</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Kostolné Kračany</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Kráľovičove Kračany</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Lúč Na Ostrove</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Vydrany</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Blahovo</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Klatov</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Holice</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Povoda</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Kútniky</td><td>0</td><td>0</td><td>0</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>Email: <a href="mailto:mladeznaliga@gmail.com">mladeznaliga@gmail.com</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Južno Slovenská amatérna liga do 14 rokov
+</footer>
+
+<script>
+  const teams = [
+    "Dunajská Streda Sever",
+    "Gabčíkovo",
+    "Spojené Dvorníky",
+    "Malé Dvorníky FC",
+    "Orechová Potôň",
+    "Vrakúň Východ",
+    "FC Jahodná",
+    "Tomášikovo",
+    "Dolný Bar",
+    "Kostolné Kračany",
+    "Kráľovičove Kračany",
+    "Lúč Na Ostrove",
+    "Vydrany",
+    "Blahovo",
+    "Klatov",
+    "Holice",
+    "Povoda",
+    "Kútniky"
+  ];
+
+  // Generovanie zápasov s vyváženými domácimi/hosťujúcimi
+  function generateBalancedMatches(teams) {
+    const matches = [];
+    for (let i = 0; i < teams.length; i++) {
+      for (let j = i + 1; j < teams.length; j++) {
+        if ((i + j) % 2 === 0) {
+          matches.push({ home: teams[i], away: teams[j] });
+        } else {
+          matches.push({ home: teams[j], away: teams[i] });
+        }
+      }
+    }
+    return matches;
+  }
+
+  // Priraďovanie dátumov a času zápasov (každé 2 dni od 18.6. do 31.8.2025)
+  function assignDates(matches) {
+    const startDate = new Date(2025, 5, 18);
+    const endDate = new Date(2025, 7, 31);
+    const matchIntervalDays = 2;
+
+    let currentDate = new Date(startDate);
+    let scheduledMatches = [];
+
+    for (let i = 0; i < matches.length; i++) {
+      if (currentDate > endDate) break;
+
+      const dateStr = currentDate.toLocaleDateString('sk-SK', {
+        day: '2-digit', month: '2-digit', year: 'numeric'
+      });
+      scheduledMatches.push({
+        date: dateStr,
+        time: "17:00",
+        home: matches[i].home,
+        away: matches[i].away
+      });
+
+      currentDate.setDate(currentDate.getDate() + matchIntervalDays);
+    }
+    return scheduledMatches;
+  }
+
+  const matches = generateBalancedMatches(teams);
+  const scheduledMatches = assignDates(matches);
+
+  const tbody = document.getElementById("matches-table-body");
+
+  scheduledMatches.forEach(match => {
+    const tr = document.createElement("tr");
+
+    const tdDate = document.createElement("td");
+    tdDate.textContent = match.date;
+    tr.appendChild(tdDate);
+
+    const tdTime = document.createElement("td");
+    tdTime.textContent = match.time;
+    tr.appendChild(tdTime);
+
+    const tdHome = document.createElement("td");
+    tdHome.textContent = match.home;
+    tr.appendChild(tdHome);
+
+    const tdAway = document.createElement("td");
+    tdAway.textContent = match.away;
+    tr.appendChild(tdAway);
+
+    tbody.appendChild(tr);
+  });
+</script>
+
+</body>
+</html>
